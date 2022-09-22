@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Tamplate 2</title>
+    <!-- STYLING THE ELEMENTS -->
+    <style>
+        /* STARTING */
+    .border{
+        margin: auto;
+        padding: 0 2%;
+        font-family: 'Rubik', sans-serif;
+        color: #333;
+        position: relative;
+        line-height: inherit;
+    }
+        /* HEADER */
+        .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgb(123, 141, 190);
+        padding: 0% 5%;
+        font-size: 18px;
+        line-height: inherit;
+    }
+    /* INFORMATIONS ABOUT THE CLIENT AND COMPANY */
+    .information{
+        display: flex;
+        flex: 2;
+        text-align: justify;
+        justify-content: space-between;
+        padding: 0 3%;
+        color: #333;
+        line-height: inherit;
+    }
+    .from, .to{
+        border-bottom: 1px solid #555;
+        text-align: center;
+    }
+    /* TABLES */
+    main table.fieldCotation{
+        width: 100%;
+        color: #333;
+    }
+    table tr.fieldHeading td{
+        background-color: rgb(95, 139, 139);
+        color: #000;
+        font: normal 15pt arial;
+        font-weight: 600;
+        border-collapse: collapse;
+        line-height: inherit;
+    }
+    main table.fieldCotation td{
+        padding: 1%;
+        border-bottom: 0.5px solid #a6a99f;
+        font-size: 18px;
+    }
+    table td{
+        padding: 5px;
+        vertical-align: top;
+    }
+    .aligning{
+        text-align: right;
+    }
+    .totalCosts td{
+        background: rgb(55, 70, 112); 
+        color: #222;
+        font-size: 20px;
+        padding: 1rem;
+        font-weight: bold;
+    }
+    .someAll{
+        line-height: inherit;
+        text-align: center;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: 0;
+        background-color: rgb(95, 139, 139);
+        color: #000000;
+    }
+    .someAll td{
+        text-align: center;
+        padding: 0.6rem;
+    }
+
+    footer{
+        display: block;
+        background: #222;
+        padding: 3% 2%;
+        color: #fff;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 530px) {
+        .information, main table.fieldCotation{
+            font-size: 10px;
+        }
+        table tr.fieldHeading td, .totalCosts td{
+            font-size: 10px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+<div class="border">
+        <header class="header">
+            <div>
+                <img src="#" alt="Logo">
+            </div>
+            <nav>
+                <p>Invoice #: INV001</p>
+                <p>Created: 2022-09-17</p>
+                <p>Due: 2022-10-01</p>
+            </nav>
+        </header>
+            <section class="information">
+                <!-- COMPANY INFORMATIONS -->
+                <div class="companyInfo">
+                    <p class="from"><b>From</b></p>
+                    <p>Your Company</p>
+                    <p>Your Name</p>
+                    <p>4546456461</p>
+                    <p>your.email@company.com</p>
+                    <p>France, Paris</p>
+                    <p>Second st. 1</p>
+                    <p>Apt. 01</p>
+                    <p>FR0005</p>
+                    <p>Registration Code: 1111111</p>
+                    <p>Bank Account: 26 6546 7878 9787</p>
+                    <p>VAT number: FR100000000111</p>
+                </div>
+                <!-- CLIENT INFORMATIONS -->
+                <div class="clientInfo">
+                    <p class="to"><b>To</b></p>
+                    <p>Client Company</p>
+                    <p>Client Name</p>
+                    <p>4587851255</p>
+                    <p>client.email@company.com</p>
+                    <p>Germany, Berlin</p>
+                    <p>Main st. 1</p>
+                    <p>Second Floor, 250F</p>
+                    <p>DE0001</p>
+                    <p>Registration Code: 111111</p>
+                    <p>VAT number: DE100000000213</p>
+                </div>
+            </section>
+
+
+            <!-- TABLE OF DETAILS -->
+        <main>
+            <table class="fieldCotation">
+                <tr class="fieldHeading">
+                    <td style="text-align: left;">Description</td>
+                    <td style="text-align: center;">Quantity</td>
+                    <td style="text-align: center;">Unit</td>
+                    <td style="text-align: center;">Price €</td>
+                    <td class="aligning">Amount €</td>
+                </tr>
+                <!-- FIELD 1 -->
+                <tr class="item">
+                    <td style="text-align: left;">Consultation</td>
+                    <td style="text-align: center;">3</td>
+                    <td style="text-align: center;">Hour</td>
+                    <td style="text-align: center;">30</td>
+                    <td class="aligning">90</td>
+                </tr>
+                <!-- FIELD 2 -->
+                <tr class="item">
+                    <td style="text-align: left;">Contracting Work</td>
+                    <td style="text-align: center;">40</td>
+                    <td style="text-align: center;">Hour</td>
+                    <td style="text-align: center;">15</td>
+                    <td class="aligning">600</td>
+                </tr>
+                <!-- FIELD 3 -->
+                <tr class="item">
+                    <td style="text-align: left;">Supplies</td>
+                    <td style="text-align: center;">100</td>
+                    <td style="text-align: center;">Unit</td>
+                    <td style="text-align: center;">5</td>
+                    <td class="aligning">500</td>
+                </tr>
+            </table>
+
+            <!-- TOTALIZING THE COSTS -->
+            <table class="someAll">
+                <tr class="subtotal">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="aligning" style="font-weight: 600;">Subtotal:</td>
+                    <td class="aligning">€ 1190</td>
+                </tr>
+                <tr class="discount">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="aligning" style="font-weight: 600;">Discount:</td>
+                    <td class="aligning">50 %</td>
+                </tr>
+                <tr class="tax">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="aligning" style="font-weight: 600;">VAT:</td>
+                    <td class="aligning">21 %</td>
+                </tr>
+                <tr class="totalCosts">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="aligning">Total:</td>
+                    <td class="aligning">€ 719.95</td>
+                </tr>
+            </table>
+        </main>
+        <div class="signature" style="padding-top: 0px; padding-left: 10%;
+            padding-right: 20px;">
+            <p style="font: normal 12pt arial; color: #555;">Your Name</p>
+            <svg style="transform: translateY(-18px);" width="120px" height="130px"
+                 viewBox="0 0 1100 1100">
+                <path d="M0.0 269.89172 L17.983337 238.9046 L23.66655 232.79663
+                L30.480057 226.30322 L38.118088 223.3418 L45.57022 226.67719
+                L51.651306 234.87976 L57.59143 245.28027 L62.32538 254.97253
+                L68.15457 262.11267 L74.197266 266.84247 L80.82141 267.89258
+                L89.70264 267.89258 L98.6293 267.10608 L107.701965 266.89294
+                L117.60693 268.67822 L125.34665 271.47614 L131.95584 272.66003
+                L137.91278 274.1501 L143.9856 273.89008 L151.2609 271.3307 L159.5361
+                263.2107 L168.73233 254.00977 L176.13522 245.77893 L180.79483
+                240.94153 L184.29626 237.26068 L186.47021 235.5846 L188.6485
+                234.90631 L189.3247 234.90631 L193.23303 237.51318 L198.75629
+                242.15704 L204.75546 248.84552 L209.66791 254.76007 L214.89276
+                258.44238 L220.64996 261.3224 L228.54181 260.14508 L236.03497
+                258.6457 L243.77365 257.14722 L248.48688 259.37408 L254.9812
+                264.85022 L259.33566 271.85052 L264.87915 278.0127 L269.30673
+                281.25775 L273.8647 283.5921 L282.12122 283.88586 L289.12314
+                280.53094 L295.51242 279.88757 L299.121 278.88794 L302.04483
+                278.88794 L304.39792 278.2085 L305.90973 277.88837 L307.21555
+                277.88837 L308.38162 278.55524 L311.03537 280.0492 L314.38028
+                282.22943 L316.99472 284.0299 L324.09024 285.5633 L331.47604
+                285.88507 L342.874 284.5877 L353.57034 282.75812 L366.73953
+                279.06415 L379.3549 275.71277 L397.3591 269.31628 L416.41922
+                258.7857 L435.80875 247.84723 L461.0626 231.24817 L478.87265
+                216.8772 L496.34805 202.24689 L510.7623 195.50262 L519.0875
+                190.58386 L526.9236 186.92627 L530.71423 186.92627 L535.02527
+                188.55579 L540.9686 191.15924 L543.6637 192.09119 L545.58374
+                192.92377 L548.0885 194.5191 L551.7184 195.9989 L559.81274 194.85681
+                L572.0476 183.94818 L591.4369 158.53174 L619.39417 112.630615
+                L639.7406 55.982178 L650.1189 14.155518 L651.39685 10.0"
+                      fill="transparent" stroke="black" stroke-width="5" />
+            </svg>
+        </div>
+
+        <footer>
+            Upon payment please specify payee code.
+        </footer>
+</div>
+</body>
+</html>

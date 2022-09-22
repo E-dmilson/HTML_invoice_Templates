@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Invoice</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			@media print {
+				@page {
+					size: A3;
+				}
+			}
+			ul {
+				padding: 0;
+				margin: 0 0 1rem 0;
+				list-style: none;
+			}
+			body {
+				font-family: "Inter", sans-serif;
+				margin: 0;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			table,
+			table th,
+			table td {
+				border: 1px solid silver;
+			}
+			table th,
+			table td {
+				text-align: center;
+				padding: 8px;
+			}
+			h1,
+			h4,
+			p {
+				margin: 0;
+			}
+
+			.container {
+				padding: 20px 0;
+				width: 1000px;
+				max-width: 90%;
+				margin: 0 auto;
+			}
+
+			.inv-title {
+				padding: 10px;
+				border: 1px solid silver;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+
+			.inv-logo {
+				width: 150px;
+				display: block;
+				margin: 0 auto;
+				margin-bottom: 40px;
+			}
+
+			/* header */
+			.inv-header {
+				display: flex;
+				margin-bottom: 20px;
+			}
+			.inv-header > :nth-child(1) {
+				flex: 2;
+			}
+			.inv-header > :nth-child(2) {
+				flex: 1;
+			}
+			.inv-header h2 {
+				font-size: 20px;
+				margin: 0 0 0.3rem 0;
+			}
+			.inv-header ul li {
+				font-size: 15px;
+				padding: 3px 0;
+			}
+
+			/* body */
+			.inv-body table th,
+			.inv-body table td {
+				text-align: center;
+			}
+			.inv-body table th{
+				background: #999;
+			}
+			.inv-body {
+				margin-bottom: 30px;
+			}
+
+			/* footer */
+			.inv-footer {
+				display: flex;
+				flex-direction: row;
+			}
+			.inv-footer > :nth-child(1) {
+				flex: 2;
+			}
+			.inv-footer > :nth-child(2) {
+				flex: 1;
+			}
+			.date{
+				background: rgb(197, 194, 194);
+			}
+			footer{
+				background-color: #333;
+				padding: 2rem 0;
+				text-align: center;
+				color: #999;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="inv-title">
+				<h1>Invoice # INV001</h1>
+			</div>
+			<img src="#" class="inv-logo" />
+			<div class="inv-header">
+				<div>
+					<h2>FROM</h2>
+					<ul>
+						<li>Your Company</li>
+						<li>Your Name</li>
+						<li>4546456461</li>
+						<li>your.email@company.com</li>
+						<li>France, Paris</li>
+						<li>Second st. 1</li>
+						<li>Apt. 01</li>
+						<li>FR0005</li>
+						<li>Registration Code: 1111111</li>
+						<li>Bank Account: 26 6546 7878 9787</li>
+						<li>VAT number: FR100000000111</li>
+					</ul>
+					<h2>TO</h2>
+					<ul>
+						<li>Client Company</li>
+						<li>Client Name</li>
+						<li>4587851255</li>
+						<li>client.email@company.com</li>
+						<li>Germany, Berlin</li>
+						<li>Main st. 1</li>
+						<li>Second Floor, 250F</li>
+						<li>DE0001</li>
+						<li>Registration Code: 111111</li>
+						<li>VAT number: DE100000000213</li>
+					</ul>
+				</div>
+				<div>
+					<table class="date">
+						<tr>
+							<th>Created</th>
+							<td>2022-09-17</td>
+						</tr>
+						<tr>
+							<th>Due</th>
+							<td>2022-10-01</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="inv-body">
+				<table>
+					<thead>
+						<th>Description</th>
+						<th>Quantity</th>
+						<th>Unit</th>
+						<th>Price €</th>
+						<th>Amount €</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<p>Consultation</p>
+							</td>
+							<td>3</td>
+							<td>Hour</td>
+							<td>30</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Contracting Work</p>
+							</td>
+							<td>40</td>
+							<td>Hour</td>
+							<td>15</td>
+							<td>600</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Supplies</p>
+							</td>
+							<td>100</td>
+							<td>Unit</td>
+							<td>5</td>
+							<td>500</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="inv-footer">
+				<div><!-- required --></div>
+				<div>
+					<table>
+						<tr>
+							<th>Subtotal</th>
+							<td>€ 1190</td>
+						</tr>
+						<tr>
+							<th>Discount</th>
+							<td>50%</td>
+						</tr>
+						<tr>
+							<th>VAT</th>
+							<td>21%</td>
+						</tr>
+						<tr style="background-color: rgb(119, 68, 68);">
+							<th>Total</th>
+							<td>€ 719.95</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="signature" style="padding-top: 0px; padding-left: 20px;
+        padding-right: 20px;">
+        <p>Your Name</p>
+        <svg style="transform: translateY(-19px);" width="120px" height="160px"
+             viewBox="0 0 1100 1100">
+            <path d="M0.0 269.89172 L17.983337 238.9046 L23.66655 232.79663
+            L30.480057 226.30322 L38.118088 223.3418 L45.57022 226.67719
+            L51.651306 234.87976 L57.59143 245.28027 L62.32538 254.97253
+            L68.15457 262.11267 L74.197266 266.84247 L80.82141 267.89258
+            L89.70264 267.89258 L98.6293 267.10608 L107.701965 266.89294
+            L117.60693 268.67822 L125.34665 271.47614 L131.95584 272.66003
+            L137.91278 274.1501 L143.9856 273.89008 L151.2609 271.3307 L159.5361
+            263.2107 L168.73233 254.00977 L176.13522 245.77893 L180.79483
+            240.94153 L184.29626 237.26068 L186.47021 235.5846 L188.6485
+            234.90631 L189.3247 234.90631 L193.23303 237.51318 L198.75629
+            242.15704 L204.75546 248.84552 L209.66791 254.76007 L214.89276
+            258.44238 L220.64996 261.3224 L228.54181 260.14508 L236.03497
+            258.6457 L243.77365 257.14722 L248.48688 259.37408 L254.9812
+            264.85022 L259.33566 271.85052 L264.87915 278.0127 L269.30673
+            281.25775 L273.8647 283.5921 L282.12122 283.88586 L289.12314
+            280.53094 L295.51242 279.88757 L299.121 278.88794 L302.04483
+            278.88794 L304.39792 278.2085 L305.90973 277.88837 L307.21555
+            277.88837 L308.38162 278.55524 L311.03537 280.0492 L314.38028
+            282.22943 L316.99472 284.0299 L324.09024 285.5633 L331.47604
+            285.88507 L342.874 284.5877 L353.57034 282.75812 L366.73953
+            279.06415 L379.3549 275.71277 L397.3591 269.31628 L416.41922
+            258.7857 L435.80875 247.84723 L461.0626 231.24817 L478.87265
+            216.8772 L496.34805 202.24689 L510.7623 195.50262 L519.0875
+            190.58386 L526.9236 186.92627 L530.71423 186.92627 L535.02527
+            188.55579 L540.9686 191.15924 L543.6637 192.09119 L545.58374
+            192.92377 L548.0885 194.5191 L551.7184 195.9989 L559.81274 194.85681
+            L572.0476 183.94818 L591.4369 158.53174 L619.39417 112.630615
+            L639.7406 55.982178 L650.1189 14.155518 L651.39685 10.0"
+                  fill="transparent" stroke="black" stroke-width="5" />
+        </svg>
+    		</div>
+	</div>
+	<footer>
+		Upon payment please specify payee code.
+	</footer>
+	</body>
+</html>
